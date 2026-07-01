@@ -1,0 +1,185 @@
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.members-header {
+    text-align: center;
+    color: #fff;
+    padding: 30px 20px 10px;
+}
+
+.members-header h1 {
+    margin-bottom: 5px;
+}
+
+.btn-logout {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #1a1a2e;
+    color: #66d9ff;
+    border: 1px solid #66d9ff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background: #66d9ff;
+    color: #1a1a2e;
+}
+
+.screen {
+    display: none;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+.game-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background: #11182b;
+    border: 1px solid #2c3a5e;
+    border-radius: 12px;
+    padding: 30px 40px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    border-color: #66d9ff;
+}
+
+.game-icon {
+    font-size: 36px;
+}
+
+.game-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.game-topbar h2 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.game-topbar span {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.btn-back, .btn-restart {
+    background: transparent;
+    border: 1px solid #66d9ff;
+    color: #66d9ff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-back:hover, .btn-restart:hover {
+    background: #66d9ff;
+    color: #1a1a2e;
+}
+
+.btn-restart {
+    margin-top: 20px;
+}
+
+/* Memória */
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.memory-card {
+    width: 70px;
+    height: 70px;
+    background: #1a1a2e;
+    border: 1px solid #2c3a5e;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.memory-card.flipped {
+    background: #1f3b5c;
+}
+
+.memory-card.matched {
+    background: #1e5631;
+    cursor: default;
+}
+
+/* Jogo da velha */
+.ttt-board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 8px;
+    justify-content: center;
+}
+
+.ttt-cell {
+    width: 90px;
+    height: 90px;
+    background: #1a1a2e;
+    border: 1px solid #2c3a5e;
+    border-radius: 8px;
+    font-size: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ttt-cell:disabled {
+    cursor: default;
+}
+
+.win-message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #66d9ff;
+    min-height: 24px;
+}
+
+#screen-menu .logout-btn-container {
+    justify-content: center;
+    margin-top: 30px;
+}

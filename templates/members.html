@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'members.css' %}">
+    <link rel="stylesheet" href="{% static 'games.css' %}">
+    <title> Tech | Membros </title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'assets/GatoTech_Membro_Autorizado.png' %}" alt="Imagem pessoas felizes" class="logo">
+    </header>
+    <main>
+        <h1>Área para membros</h1>
+        <p>Uma área de membros exclusivo</p>
+
+        <!-- TELA 1: MENU DE ESCOLHA -->
+        <section id="screen-menu" class="screen active">
+            <h2>Escolha um jogo</h2>
+            <div class="game-cards">
+                <button class="game-card" onclick="showScreen('memory')">
+                    <span class="game-icon">🧠</span>
+                    <span>Jogo da Memória</span>
+                </button>
+                <button class="game-card" onclick="showScreen('tictactoe')">
+                    <span class="game-icon">❌⭕</span>
+                    <span>Jogo da Velha</span>
+                </button>
+            </div>
+            <div class="logout-btn-container">
+                <a href="http://localhost:8000/accounts/logout/" class="logout-btn">Logout</a>
+            </div>
+        </section>
+
+        <!-- TELA 2: JOGO DA MEMÓRIA -->
+        <section id="screen-memory" class="screen">
+            <div class="game-topbar">
+                <button class="btn-back" onclick="showScreen('menu')">&larr; Voltar</button>
+                <h2>Jogo da Memória</h2>
+                <span id="memory-moves">Jogadas: 0</span>
+            </div>
+            <div id="memory-board" class="memory-board"></div>
+            <p id="memory-win" class="win-message"></p>
+            <button class="btn-restart" onclick="startMemoryGame()">Reiniciar</button>
+        </section>
+
+        <!-- TELA 3: JOGO DA VELHA -->
+        <section id="screen-tictactoe" class="screen">
+            <div class="game-topbar">
+                <button class="btn-back" onclick="showScreen('menu')">&larr; Voltar</button>
+                <h2>Jogo da Velha</h2>
+                <span id="ttt-turn">Vez de: X</span>
+            </div>
+            <div id="ttt-board" class="ttt-board"></div>
+            <p id="ttt-win" class="win-message"></p>
+            <button class="btn-restart" onclick="startTicTacToe()">Reiniciar</button>
+        </section>
+    </main>
+
+    <script src="{% static 'games.js' %}"></script>
+</body>
+</html>
